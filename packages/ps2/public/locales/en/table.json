@@ -1,0 +1,28 @@
+{
+  "footer": {
+    "elements": {
+      "show": "Showing",
+      "out": "out of",
+      "items": "items"
+    },
+    "page": {
+      "items": "Page",
+      "out": "out of"
+    },
+    "selector": {
+      "display": "Displaying",
+      "items": "items"
+    }
+  },
+  "assetsInPool-investors": "{{count}} investor",
+  "assetsInPool-investors_plural": "{{count}} investors",
+  "balanceSummary-invested": "Invested",
+  "selector-validation-notData": "No data available",
+  "investColumn": {
+    "successFess": "10% Success Fee",
+    "liquidated": "LIQUIDATED"
+  },
+  "tooltip-columnHeader": "Toggle SortBy",
+  "serviceName-by": "by",
+  "columns-hideOrShow": "Show/Hide Columns"
+}

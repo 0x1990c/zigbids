@@ -1,0 +1,28 @@
+{
+  "footer": {
+    "elements": {
+      "show": "CH-Ŝĥöwïńĝ",
+      "out": "CH-öüṫ öḟ",
+      "items": "CH-ïṫëṁŝ"
+    },
+    "page": {
+      "items": "CH-Ṗáĝë",
+      "out": "CH-öüṫ öḟ"
+    },
+    "selector": {
+      "display": "CH-Ḋïŝṗláyïńĝ",
+      "items": "CH-ïṫëṁŝ"
+    }
+  },
+  "assetsInPool-investors": "CH-{{count}} ïńvëŝṫöѓ",
+  "assetsInPool-investors_plural": "CH-{{count}} ïńvëŝṫöѓŝ",
+  "balanceSummary-invested": "CH-Ïńvëŝṫëḋ",
+  "selector-validation-notData": "CH-Ńö ḋáṫá áváïláblë",
+  "investColumn": {
+    "successFess": "CH-10% Ŝüĉĉëŝŝ Ḟëë",
+    "liquidated": "CH-LÏQÜÏḊÁṪËḊ"
+  },
+  "tooltip-columnHeader": "CH-Ṫöĝĝlë ŜöѓṫBy",
+  "serviceName-by": "CH-by",
+  "columns-hideOrShow": "CH-Ŝĥöw/Ĥïḋë Ĉölüṁńŝ"
+}

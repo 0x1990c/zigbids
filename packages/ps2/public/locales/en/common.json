@@ -1,0 +1,57 @@
+{
+  "yes": "Yes",
+  "no": "No",
+  "back": "Back",
+  "close": "Close",
+  "loading": "Loading...",
+  "coming-soon": {
+    "title": "Coming Soon",
+    "description": "This section is under development, you will see it available at a later date."
+  },
+  "no-data": {
+    "title": "No Data",
+    "description": "No data available. If you believe it is an issue, please contact support."
+  },
+  "404": {
+    "title": "Not found",
+    "description": "Check the URL or your life choices."
+  },
+  "critical-error": {
+    "title": "Error Occurred",
+    "description": "Something went wrong. Please try again later or contact support. Or abandon the industrial society and build a cabin in the woods."
+  },
+  "main-menu": {
+    "dropdown-link-forTrading": "For Trading Services",
+    "dropdown-link-helpDocs": "Help Docs"
+  },
+  "refresh": {
+    "short": "New version available, click here to refresh"
+  },
+  "account-menu": {
+    "isAuth-button-logIn": "Log in",
+    "isAuth-button-signUp": "SIGN UP",
+    "notAuth-dropdown-link-dashboard": "My Dashboard",
+    "notAuth-dropdown-link-balances": "My Balances",
+    "notAuth-button-logOut": "Logout"
+  },
+  "account-selector": {
+    "type": {
+      "title": "Type:",
+      "futures": "Futures",
+      "spot": "Spot"
+    }
+  },
+  "navigation-menu": {
+    "profit-sharing": "Profit Sharing",
+    "staking": "Staking",
+    "zigpad": "ZIGPad"
+  },
+  "amount": "Amount",
+  "new-version": "New version, click me to update",
+  "validation": {
+    "insufficient-amount": "Insufficient funds",
+    "invalid-value": "Invalid value",
+    "negative-amount": "Should be >= 0",
+    "invalid-amount": "You must indicate an amount"
+  }
+}
