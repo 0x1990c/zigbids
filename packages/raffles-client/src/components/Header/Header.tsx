@@ -1,32 +1,33 @@
+import React, { useEffect, useRef } from 'react';
+import { People, Redeem } from '@mui/icons-material';
+import { useMediaQuery } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Box } from '@mui/system';
+import { UserType } from '@zignaly-open/raffles-shared/types';
 import {
-  IconButton,
   BrandImage,
+  Button,
+  DropDown,
+  Header as ZIGHeader,
+  IconButton,
   UserIcon,
   WalletIcon,
-  DropDown,
 } from '@zignaly-open/ui';
-import React, { useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
-import useCurrentUser from '../../hooks/useCurrentUser';
-import { Header as ZIGHeader, Button } from '@zignaly-open/ui';
-import { styled } from '@mui/material/styles';
-import ConnectWalletModal from '../Modals/ConnectWallet';
-import { useModal } from 'mui-modal-provider';
-import UserBalance from './UserBalance';
-import TransferZigModal from 'components/Modals/TransferZig';
-import ShareCodeModal from 'components/Modals/ShareCode';
 import RedeemCodeModal from 'components/Modals/RedeemCode';
+import ShareCodeModal from 'components/Modals/ShareCode';
 import SwitchAccountModal from 'components/Modals/SwitchAccount';
-import { Box } from '@mui/system';
-import { useEthers } from '@usedapp/core';
+import TransferZigModal from 'components/Modals/TransferZig';
 import { useLogout } from 'hooks/useAuthenticate';
-import { UserType } from '@zignaly-open/raffles-shared/types';
-import UserSettingsModal from '../Modals/UserSettings';
-import { useMediaQuery } from '@mui/material';
-import theme from 'theme';
-import { People, Redeem } from '@mui/icons-material';
-import { triggerTz } from 'util/tz';
+import { useModal } from 'mui-modal-provider';
+import { useTranslation } from 'react-i18next';
+import { theme } from 'theme';
 import { getToken } from 'util/token';
+import { triggerTz } from 'util/tz';
+import useCurrentUser from '../../hooks/useCurrentUser';
+import ConnectWalletModal from '../Modals/ConnectWallet';
+import UserSettingsModal from '../Modals/UserSettings';
+import UserBalance from './UserBalance';
+import { useWeb3React } from '@web3-react/core';
 
 const StyledPeopleIcon = styled(People)`
   color: ${(props) => props.theme.neutral200};
@@ -58,7 +59,7 @@ const Header = () => {
   const { t } = useTranslation('global');
   const { user: currentUser, loading } = useCurrentUser();
   const { showModal } = useModal();
-  const { account } = useEthers();
+  const { account } = useWeb3React();
   const logout = useLogout();
   const userRef = useRef<UserType>();
   const matchesSmall = useMediaQuery(theme.breakpoints.down('sm'));

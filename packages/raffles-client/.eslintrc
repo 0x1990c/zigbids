@@ -1,5 +1,16 @@
 {
   "extends": [
     "@zignaly-open/zignaly-react"
-  ]
+    // "plugin:react/recommended",
+    // "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["memo", "state"]
+      }
+    ]
+  }
 }

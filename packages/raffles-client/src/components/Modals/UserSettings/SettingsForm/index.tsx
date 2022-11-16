@@ -3,7 +3,7 @@ import { Gap } from 'components/Modals/ConnectWallet/styles';
 import React, { useState } from 'react';
 import { Button, ErrorMessage, InputText, Typography } from '@zignaly-open/ui';
 import { InputContainer } from '../styles';
-import theme from 'theme';
+import { theme } from 'theme';
 import { useTranslation } from 'react-i18next';
 import { Controller, useForm } from 'react-hook-form';
 import { useMutation } from '@apollo/client';

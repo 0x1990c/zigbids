@@ -1,5 +1,5 @@
 import i18n from './i18next.js';
-import theme from '../src/theme';
+import { theme } from '../src/theme';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider as ThemeProviderMui } from '@mui/material';
 import { MockedProvider } from '@apollo/client/testing';

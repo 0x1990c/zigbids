@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material';
+import { dark as darkTheme } from '@zignaly-open/ui';
 
-export default createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
@@ -47,3 +48,5 @@ export default createTheme({
     },
   },
 });
+
+export const augmentedTheme = { ...darkTheme, ...theme };

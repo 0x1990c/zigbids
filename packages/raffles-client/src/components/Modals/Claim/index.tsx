@@ -71,7 +71,7 @@ const ClaimModal = ({ auction, ...props }: ClaimModalProps) => {
         setLoading(false);
       }
     },
-    [auction],
+    [auction.id, claim, claimState, showModal],
   );
 
   if (claimState === ClaimState.Claimed) {

@@ -24,6 +24,6 @@ export const useValidateUsername = (): ((
       });
       return isValid || t('username-taken', { username });
     },
-    [checkUsername],
+    [checkUsername, t],
   );
 };

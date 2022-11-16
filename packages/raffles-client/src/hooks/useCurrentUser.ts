@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client';
-import { useEthers } from '@usedapp/core';
+import { useWeb3React } from '@web3-react/core';
 import { UserType } from '@zignaly-open/raffles-shared/types';
 import { GetCurrentUserResponseModel } from 'queries/auctions';
 import { getToken } from 'util/token';
@@ -11,7 +11,7 @@ export interface CurrentUserModel {
 }
 
 export default function useCurrentUser(): CurrentUserModel {
-  const { account } = useEthers();
+  const { account } = useWeb3React();
   const { loading, data: currentUser }: GetCurrentUserResponseModel = useQuery(
     GET_CURRENT_USER,
     {
