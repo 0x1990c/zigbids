@@ -7,12 +7,11 @@ import { theme } from 'theme';
 import { useTranslation } from 'react-i18next';
 import { Controller, useForm } from 'react-hook-form';
 import { useMutation } from '@apollo/client';
-import { CHANGE_PROFILE } from 'queries/users';
+import { CHANGE_PROFILE, GET_AUCTIONS } from 'config/apollo/queries';
 import { UserSettingsValidation } from 'util/validation';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Form } from './styles';
 import { UserSettingsModalProps } from '../types';
-import { GET_AUCTIONS } from 'queries/auctions';
 import useCurrentUser from 'hooks/useCurrentUser';
 
 const SettingsForm = (props: UserSettingsModalProps) => {

@@ -2,10 +2,12 @@ import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useWeb3React } from '@web3-react/core';
 import { UserType } from '@zignaly-open/raffles-shared/types';
-import { GetCurrentUserResponseModel } from 'queries/auctions';
+import {
+  GetCurrentUserResponseModel,
+  GET_CURRENT_USER,
+} from 'config/apollo/queries';
 import { useAppDispatch } from 'state/hooks';
 import { getToken } from 'util/token';
-import { GET_CURRENT_USER } from '../queries/users';
 import { updateCurrentUser } from 'state/user/reducer';
 
 export interface CurrentUserModel {

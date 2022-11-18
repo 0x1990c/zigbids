@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { UserType } from '@zignaly-open/raffles-shared/types';
 import { GraphQLError } from 'graphql';
-import { GetCurrentUserResponseModel } from 'queries/auctions';
+import { GetCurrentUserResponseModel } from 'config/apollo/queries';
 import useCurrentUser, { CurrentUserModel } from './useCurrentUser';
 
 jest.mock('@apollo/client', () => ({

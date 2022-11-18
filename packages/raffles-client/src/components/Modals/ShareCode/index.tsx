@@ -3,7 +3,10 @@ import { useQuery } from '@apollo/client';
 import { Box } from '@mui/system';
 import { PriceLabel, Table, Typography } from '@zignaly-open/ui';
 import { TableProps } from '@zignaly-open/ui/lib/components/display/Table/types';
-import { GET_USER_CODES, GET_USER_CODES_REDEMPTIONS } from 'queries/codes';
+import {
+  GET_USER_CODES,
+  GET_USER_CODES_REDEMPTIONS,
+} from 'config/apollo/queries';
 import { useTranslation } from 'react-i18next';
 import DialogContainer from '../DialogContainer';
 import { ShareCodeProps, UserCodes, UserCodesRedemptions } from './types';

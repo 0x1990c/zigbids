@@ -2,13 +2,13 @@ import { useApolloClient, useMutation } from '@apollo/client';
 import { useWeb3React } from '@web3-react/core';
 import { Connector } from '@web3-react/types';
 import { getConnection } from 'config/web3';
-import { GET_AUCTIONS } from 'queries/auctions';
 import {
+  GET_AUCTIONS,
   AUTHENTICATE_METAMASK,
   GET_CURRENT_USER,
   GET_CURRENT_USER_BALANCE,
   GET_OR_CREATE_USER,
-} from 'queries/users';
+} from 'config/apollo/queries';
 import { useCallback, useState } from 'react';
 import { useAsync } from 'react-use';
 import { useAppDispatch } from 'state/hooks';
