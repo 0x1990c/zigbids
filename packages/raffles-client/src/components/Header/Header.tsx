@@ -1,9 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { People, Redeem } from '@mui/icons-material';
 import { useMediaQuery } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
-import { UserType } from '@zignaly-open/raffles-shared/types';
 import {
   BrandImage,
   Button,
@@ -28,6 +27,7 @@ import ConnectWalletModal from '../Modals/ConnectWallet';
 import UserSettingsModal from '../Modals/UserSettings';
 import UserBalance from './UserBalance';
 import { useWeb3React } from '@web3-react/core';
+import SwitchNetworkContainer from './SwitchNetwork';
 
 const StyledPeopleIcon = styled(People)`
   color: ${(props) => props.theme.neutral200};
@@ -57,18 +57,17 @@ const MenuButton = styled(IconButton)`
 
 const Header = () => {
   const { t } = useTranslation('global');
-  const { user: currentUser, loading } = useCurrentUser();
+  const { loading, user: currentUser } = useCurrentUser();
   const { showModal } = useModal();
   const { account } = useWeb3React();
   const logout = useLogout();
-  const userRef = useRef<UserType>();
   const matchesSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
   const href = window.location.href;
-
   // Url tracking
   // Todo: extract to separate hook
   const token = getToken();
+
   useEffect(() => {
     // Avoid making an unnecessary request if user id is loading
     if (!token || currentUser?.id) {
@@ -79,19 +78,13 @@ const Header = () => {
   useEffect(() => {
     if (currentUser) {
       if (
-        account &&
-        account.toLowerCase() !== currentUser.publicAddress.toLowerCase()
+        account !== undefined &&
+        account?.toLowerCase() !== currentUser?.publicAddress.toLowerCase()
       ) {
         // User changed MM account, ask to disconnect.
         showModal(SwitchAccountModal);
       }
-    } else if (userRef.current) {
-      // Disconnected manually from MM.
-      logout();
     }
-
-    // Save user to avoid detecting false disconnection because "account" wasn't yet loaded at page load.
-    userRef.current = currentUser;
   }, [account, currentUser]);
 
   return (
@@ -139,6 +132,8 @@ const Header = () => {
               <Box ml={{ sm: 0, xs: 1 }}>
                 <UserBalance />
               </Box>
+              <SwitchNetworkContainer />
+
               <DropDown
                 options={[
                   {

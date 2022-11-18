@@ -1,3 +1,4 @@
+import { useInactiveListener } from 'hooks';
 import React from 'react';
 import { Routes as RouterRoutes, Route } from 'react-router-dom';
 import Auctions from './components/Auctions/Auctions';
@@ -5,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 
 function Routes() {
+  useInactiveListener();
   return (
     <>
       <Header />

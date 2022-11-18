@@ -3,6 +3,7 @@ import { MetaMask } from '@web3-react/metamask';
 import { Connector } from '@web3-react/types';
 import { WalletConnect } from '@web3-react/walletconnect';
 import { RPC_URLS } from './rpcUrls';
+
 export enum ConnectionType {
   INJECTED = 'INJECTED',
   WALLET_CONNECT = 'WALLET_CONNECT',
@@ -64,7 +65,7 @@ export function getIsMetaMask(): boolean {
 }
 
 export function getIsCoinbaseWallet(): boolean {
-  return window.ethereum?.isCoinbaseWallet ?? false;
+  return (window.ethereum as EthereumProvider)?.isCoinbaseWallet ?? false;
 }
 
 const CONNECTIONS = [injectedConnection, walletConnectConnection];

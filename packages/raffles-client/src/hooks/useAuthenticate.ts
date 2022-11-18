@@ -84,8 +84,8 @@ export default function useAuthenticate(): {
           walletType: connectionType.toLocaleLowerCase(),
         },
       });
-
-      const signature = await provider?.getSigner().signMessage(messageToSign);
+      const signer = provider.getSigner();
+      const signature = await signer.signMessage(messageToSign);
 
       const {
         data: {

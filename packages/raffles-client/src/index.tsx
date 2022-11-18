@@ -32,7 +32,7 @@ ReactDOM.render(
         </Helmet>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<EntryPoint />} />
+            <Route path='/*' element={<EntryPoint />} />
             <Route
               path='/admin/*'
               element={
