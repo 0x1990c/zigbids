@@ -13,13 +13,14 @@ interface BaseChainInfo {
     symbol: string; // e.g. 'gorETH',
     decimals: number; // e.g. 18,
   };
+  readonly isTestNet?: boolean;
 }
 
 export type ChainInfoMap = {
   readonly [chainId in SupportedChainId]: BaseChainInfo;
 };
 
-const CHAIN_INFO: ChainInfoMap = {
+export const CHAIN_INFO: ChainInfoMap = {
   [SupportedChainId.POLYGON]: {
     explorer: 'https://polygonscan.com/',
     label: 'Polygon',
@@ -35,6 +36,7 @@ const CHAIN_INFO: ChainInfoMap = {
       symbol: 'mMATIC',
       decimals: 18,
     },
+    isTestNet: true,
   },
   [SupportedChainId.ETHEREUM]: {
     explorer: 'https://etherscan.io/',
@@ -47,6 +49,7 @@ const CHAIN_INFO: ChainInfoMap = {
     label: 'Görli',
     logoUrl: ETHEREUM_LOGO_URL,
     nativeCurrency: { name: 'Görli Ether', symbol: 'görETH', decimals: 18 },
+    isTestNet: true,
   },
   [SupportedChainId.BINANCE]: {
     explorer: 'https://bscscan.com',

@@ -72,7 +72,8 @@ module.exports = {
       {
         "props": true,
         "ignorePropertyModificationsFor": [
-          "memo"
+          "memo",
+          "state"
         ]
       }
     ],
